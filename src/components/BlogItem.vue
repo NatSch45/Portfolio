@@ -2,8 +2,7 @@
     <div class="blogItem">
         <h1>{{ title }}</h1>
         <h2>{{ subtitle }}</h2>
-        <img src="@/assets/img/bdd.png" alt="BDD"/>
-        <img :src="'src/assets/img/'+image" :alt="image" />
+        <img :src="uri" :alt="image" />
         
         <div class="read">
             <p>Lire</p>
@@ -15,7 +14,12 @@
 <script>
     export default {
         name: 'BlogItem',
-        props: ['title', 'subtitle', 'image']
+        props: ['title', 'subtitle', 'image'],
+        computed: {
+            uri() {
+                return 'src/assets/img/' + this.image
+            }
+        }
     }
 </script>
 
