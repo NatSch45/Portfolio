@@ -1,8 +1,8 @@
 <template>
     <div class="blogItem">
+        <img :src="uri" :alt="image" />
         <h1>{{ title }}</h1>
         <h2>{{ subtitle }}</h2>
-        <img :src="uri" :alt="image" />
         
         <div class="read">
             <p>Lire</p>
@@ -17,7 +17,7 @@
         props: ['title', 'subtitle', 'image'],
         computed: {
             uri() {
-                return '@/assets/img/' + this.image
+                return new URL(`../assets/img/${this.image}`, import.meta.url).href
             }
         }
     }
