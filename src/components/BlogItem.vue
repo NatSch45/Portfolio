@@ -17,7 +17,7 @@
         props: ['title', 'subtitle', 'image'],
         computed: {
             uri() {
-                return 'src/assets/img/' + this.image
+                return '@/assets/img/' + this.image
             }
         }
     }
