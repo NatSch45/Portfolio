@@ -18,7 +18,7 @@ export default {
             projects: [
                 {
                     name: "Hope",
-                    description: "Vous en avez assez des médias qui ne tirent souvent que le mauvais des informations internationales ou autres faits divers ? Alors ce média positif va vous plaire en égayant votre journée à l'aide d'anecdotes positives !",
+                    description: "Vous en avez assez des médias qui ne tirent souvent que le mauvais des informations internationales et autres faits divers ? Alors ce média positif va vous plaire en égayant votre journée à l'aide d'anecdotes positives !",
                     date: "2020-2022",
                     backgroundImg: "backgroundImgProjt1.png",
                 },

@@ -8,12 +8,44 @@ export default {
 </script>
 
 <template>
-    <div class="frame">
-        <LoginForm />
+    <div class="background">
+        <div class="leftZone">
+            <p>Il est également possible de me contacter directement par mail via l'adresse suivante : nathan.schneider4505@gmail.com</p>
+        </div>
+        <div class="frame">
+            <LoginForm />
+        </div>
+        <div class="rightZone">
+            <p>...ou alors directement par téléphone via ce numéro : 07.82.45.39.21</p>
+        </div>
     </div>
 </template>
 
 <style>
+    .background {
+        width: 100%;
+        height: 100%;
+        /* background-image: url(../assets/blurry-gradient-haikei.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; */
+        background-image: linear-gradient(53deg, #27ada2, #74c1b5, #b4d9d2, #f0f0f0)
+    }
+
+    .leftZone {
+        position: fixed;
+        width: 24%;
+        top: 200px;
+        left: 3%;
+    }
+
+    .rightZone {
+        position: fixed;
+        width: 24%;
+        top: 200px;
+        right: 3%;
+    }
+
     .frame {
         width: 40%;
         height: 80%;
@@ -29,6 +61,13 @@ export default {
 
         background-color: #ACFFE3;
         border-radius: 15px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .frame form {
@@ -40,12 +79,13 @@ export default {
     .frame label {
         display: flex;
         flex-direction: column;
+        width: 90%;
 
-        padding: 5%;
+        padding: 3%;
     }
     .frame button {
         cursor: pointer;
-        margin-top: 15%;
+        margin-top: 5%;
         padding: 5% 15%;
         border: none;
         outline: none;

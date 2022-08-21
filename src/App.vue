@@ -5,19 +5,24 @@
     <header>
         <nav>
             <ul class="navlist">
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/projects">Projets</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/about">À propos</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><router-link to="/">Accueil</router-link></li>
+                <li><router-link to="/projects">Projets</router-link></li>
+                <li><router-link to="/blog">Blog</router-link></li>
+                <li><router-link to="/about">À propos</router-link></li>
+                <li><router-link to="/contact">Contact</router-link></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <router-view />
+        <router-view v-slot="{ Component }">
+            <transition name="fade" mode="out-in">
+                <component :is="Component" />
+            </transition>
+        </router-view>
     </main>
 </template>
 
-<style scoped>
+<style>
+
 </style>

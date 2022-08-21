@@ -1,33 +1,37 @@
 <template>
-    <div class="presentDiv1">
-        <h1>Bonjour, je suis Nathan SCHNEIDER et voici mon site personnel</h1>
+    <div>
+        <div class="presentDiv1">
+            <h1>Bienvenue sur mon site personnel,</h1>
+            <h1>Je m'appelle Nathan Schneider, j'ai 20 ans et je suis actuellement étudiant en informatique</h1>
+            <div class="meImg"></div>
+            <h2>J'intègre une 3ème année d'études supérieures en informatique à la rentrée 2022, en me spécialisant dans les datasciences et l'IA.</h2>
+            <h2>Ici, vous trouverez toutes les informations sur moi, mon parcours et mon travail. Je vous laisse regarder prendre connaissances du contenu à votre disposition en bas de cette page !</h2>
+        </div>
 
-        <div class="meImg"></div>
+        <div class="presentDiv2">
+            <h2>Ce site comprend...</h2>
+            <div class="presentItem">
+                <font-awesome-icon icon="fa-solid fa-code" />
+                <h3>Mon <span><a href="/projects">portfolio</a></span> avec tous les projets que j'ai mené ou ceux auxquels j'ai participé,</h3>
+            </div>
+            <div class="presentItem">
+                <font-awesome-icon icon="fa-solid fa-message" />
+                <h3>Un <span><a href="/blog">blog</a></span> dans lequel je répertorie mes articles qui traitent de sujets touchant de loin ou de près à l'informatique,</h3>
+            </div>
+            <div class="presentItem">
+                <font-awesome-icon icon="fa-solid fa-user-tie" />
+                <h3>Une page "<span><a href="/about">À propos</a></span>" pour en savoir plus sur mon parcours, mes motivations et mes objectifs,</h3>
+            </div>
+            <div class="presentItem">
+                <font-awesome-icon icon="fa-solid fa-envelope-open-text" />
+                <h3>Un formulaire de <span><a href="/contact">contact</a></span> si vous souhaitez en apprendre davantage, parler d'une éventuelle collaboration ou me faire parvenir une remarque.</h3>
+            </div>
+        </div>
+
+        <footer>
+            <p>Développé en <span>VueJS</span> avec l'aide de <span>FontAwesome</span>.</p>
+        </footer>
     </div>
-
-    <div class="presentDiv2">
-        <h2>Ce site comprend...</h2>
-        <div class="presentItem">
-            <font-awesome-icon icon="fa-solid fa-code" />
-            <h3>Mon <span><a href="/projects">portfolio</a></span> avec tous les projets que j'ai mené ou ceux auxquels j'ai participé,</h3>
-        </div>
-        <div class="presentItem">
-            <font-awesome-icon icon="fa-solid fa-message" />
-            <h3>Un <span><a href="/blog">blog</a></span> dans lequel je répertorie mes articles qui traitent de sujets touchant de loin ou de près à l'informatique,</h3>
-        </div>
-        <div class="presentItem">
-            <font-awesome-icon icon="fa-solid fa-user-tie" />
-            <h3>Une page "<span><a href="/about">À propos</a></span>" pour en savoir plus sur mon parcours, mes motivations et mes objectifs,</h3>
-        </div>
-        <div class="presentItem">
-            <font-awesome-icon icon="fa-solid fa-envelope-open-text" />
-            <h3>Un formulaire de <span><a href="/contact">contact</a></span> si vous souhaitez en apprendre davantage, parler d'une éventuelle collaboration ou me faire parvenir une remarque.</h3>
-        </div>
-    </div>
-
-    <footer>
-        <p>Développé en <span>VueJS</span> avec l'aide de <span>FontAwesome</span>.</p>
-    </footer>
 </template>
 
 <script>
@@ -48,6 +52,15 @@
 
         /* -webkit-box-shadow: 0px -19px 14px -10px rgba(172,255,227,0.49); 
         box-shadow: 0px -19px 14px -10px rgba(172,255,227,0.49); */
+    }
+    .presentDiv1 h1 {
+        /* text-transform: uppercase; */
+    }
+    .presentDiv1 h1 ~ h1 {
+        margin-left: 10%;
+    }
+    .presentDiv1 h2:first-of-type {
+        margin-top: 300px;
     }
 
     .meImg {
@@ -111,8 +124,10 @@
         align-items: center;
 
         background-color: rgb(0, 0, 0);
+        color: #E2E6E9;
     }
     footer p span {
         font-weight: bold;
+        color: #00BD7E;
     }
 </style>
