@@ -34,7 +34,7 @@ export default {
                     presentImg: "imitation-game.png"
                 },
                 {
-                    title: "Voici comment faire pour être un meilleur développeur",
+                    title: "Voici comment faire pour devenir un meilleur développeur",
                     subtitle: "Les règles et les principes qu'un développeur doit suivre pour augmenter sa qualité de code et de réflexion",
                     presentImg: "chad-dev.jpg"
                 },

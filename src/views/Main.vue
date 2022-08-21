@@ -65,7 +65,7 @@
 
     .meImg {
         float: right;
-        background: url("../assets/moiDetoureBisRognable.png");
+        background: url("../assets/img/moiDetoureBisRognable.png");
         background-repeat: no-repeat;
         background-size: 210% 150%;
         background-position: 47% 25%;
