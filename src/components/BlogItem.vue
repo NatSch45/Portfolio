@@ -71,10 +71,13 @@
     }
     .read p {
         font-size: 30px;
+        font-weight: bold;
         color: #00BD7E;
     }
     .read svg {
         font-size: 38px;
+        margin-left: 8px;
+        color: #00BD7E;
     }
     .blogItem:hover .read {
         opacity: 1;

@@ -1,11 +1,15 @@
 <template>
     <div>
         <div class="presentDiv1">
-            <h1>Bienvenue sur mon site personnel,</h1>
-            <h1>Je m'appelle Nathan Schneider, j'ai 20 ans et je suis actuellement étudiant en informatique</h1>
-            <div class="meImg"></div>
-            <h2>J'intègre une 3ème année d'études supérieures en informatique à la rentrée 2022, en me spécialisant dans les datasciences et l'IA.</h2>
-            <h2>Ici, vous trouverez toutes les informations sur moi, mon parcours et mon travail. Je vous laisse regarder prendre connaissances du contenu à votre disposition en bas de cette page !</h2>
+            <video class="backgroundVideo" autoplay muted loop>
+                <source src="../assets/background-anime.mkv" type="video/mp4">
+            </video>
+            <div class="firstText">
+                <h1 class="stroke-shadow">Bienvenue sur mon site personnel,</h1>
+            </div>
+            <div class="secondText">
+                <h2 class="stroke-shadow">Je m'appelle Nathan Schneider, j'ai 20 ans et je suis actuellement étudiant en informatique</h2>
+            </div>
         </div>
 
         <div class="presentDiv2">
@@ -40,40 +44,66 @@
     }
 </script>
 
-<style>
+<style scoped>
+
+    header {
+        background-color: #090525 !important;
+    }
+
     .presentDiv1 {
-        background-color: rgba(127, 255, 212, 0.65);
+        position: relative;
+        background-color: #090525;
         width: 100%;
-        height: 700px;
+        height: calc(100vh - 100px);
         padding: 3%;
 
         -webkit-box-shadow: 0px 19px 14px -10px rgba(172,255,227,0.49); 
         box-shadow: 0px 19px 14px -10px rgba(172,255,227,0.49);
+        overflow: hidden;
 
         /* -webkit-box-shadow: 0px -19px 14px -10px rgba(172,255,227,0.49); 
         box-shadow: 0px -19px 14px -10px rgba(172,255,227,0.49); */
     }
-    .presentDiv1 h1 {
-        /* text-transform: uppercase; */
+    .firstText {
+        position: absolute;
+        left: 3%;
+        color: white;
     }
     .presentDiv1 h1 ~ h1 {
         margin-left: 10%;
+        text-align: end;
+    }
+    .secondText {
+        position: absolute;
+        bottom: 20px;
+        right: 3%;
+        width: 50%;
+    }
+    .secondText h2 {
+        text-align: end;
     }
     .presentDiv1 h2:first-of-type {
-        margin-top: 300px;
+        margin-top: 30px;
     }
 
-    .meImg {
-        float: right;
-        background: url("../assets/img/moiDetoureBisRognable.png");
-        background-repeat: no-repeat;
-        background-size: 210% 150%;
-        background-position: 47% 25%;
-        border-radius: 50%;
-        height: 300px;
-        width: 300px;
-        border: 2px solid black;
-        transform: scaleX(-1);
+    .stroke-shadow {
+        color: #090525;
+        text-shadow: -2px 0 #ffffff, 0 -2px #ffffff, 2px 0 #ffffff, 0 2px #ffffff, 2px 2px #ffffff, -2px -2px #ffffff, -2px 2px #ffffff, 2px -2px #ffffff, 5px 5px #00BD7E;
+        font-size: 2vw;
+        font-weight: bold;
+        letter-spacing: 5px;
+        margin: 0;
+    }
+
+    .backgroundVideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 190.77777778vh; /* 100 * 16 / 9 */
+        min-width: 100%;
+        min-height: 70.25vw; /* 100 * 9 / 16 */
     }
 
     .presentDiv2 {
@@ -110,7 +140,7 @@
         background-color: hsla(160, 100%, 37%, 0.2);
     }
 
-    svg {
+    .presentItem svg {
         padding: 3%;
         color: #00BD7E;
         font-size: 50px;

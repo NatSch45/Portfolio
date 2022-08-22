@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Credits
+
+- [Timeline - About page](https://codepen.io/hunzaboy/pen/qBWRBXw)

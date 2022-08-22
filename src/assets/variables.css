@@ -1,0 +1,16 @@
+:root {
+    --event1-main: #9251ac;
+    --event1-second: #f6a4ec;
+
+    --event2-main: #555ac0;
+    --event2-second: #87bbfe;
+
+    --event3-main: #24b47e;
+    --event3-second: #aff1b6;
+
+    --event4-main: #c9001b;
+    --event4-second: #ff8851;
+
+    --event5-main: #5f131b;
+    --event5-second: #92493f; /* #ca5523 */
+}

@@ -19,7 +19,7 @@ export default {
         return {
             articles: [
                 {
-                    title: "Projet professionnel VS profet non professionnel",
+                    title: "Projet professionnel VS projet non professionnel",
                     subtitle: "Zoom sur les différences qui existent entre un projet étudiant ou personnel avec un projet professionnel",
                     presentImg: "pro-dev.png"
                 },

@@ -12,9 +12,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faCode, faMessage, faUserTie, faEnvelopeOpenText, faAnglesRight } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faMessage, faUserTie, faEnvelopeOpenText, faAnglesRight, faGraduationCap, faSchool, faSchoolCircleExclamation, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faCode, faMessage, faUserTie, faEnvelopeOpenText, faAnglesRight)
+library.add(faCode, faMessage, faUserTie, faEnvelopeOpenText, faAnglesRight, faGraduationCap, faSchool, faSchoolCircleExclamation, faBriefcase)
 
 let app = createApp(App)
 
