@@ -2,7 +2,7 @@
     <div>
         <div class="presentDiv1">
             <video class="backgroundVideo" autoplay muted loop>
-                <source src="../assets/background-anime.mkv" type="video/mp4">
+                <source src="../assets/background-anime.mp4" type="video/mp4">
             </video>
             <div class="firstText">
                 <h1 class="stroke-shadow">Bienvenue sur mon site personnel,</h1>
