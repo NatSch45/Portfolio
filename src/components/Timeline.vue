@@ -4,7 +4,7 @@
         <h2>Voici les évènements constituants mon parcours scolaire et professionnel</h2>
 
         <div class="mainTimeline">
-            <div v-for="(step, i) in steps" :key="i" class="timeline__event" :class="['timeline__event--type'+step.colorType]">
+            <div v-for="(step, i) in steps" :key="i" class="timeline__event fade-down" :class="['timeline__event--type'+step.colorType]">
                 <div class="timeline__event__icon">
                     <font-awesome-icon :icon="'fa-solid '+step.ico" />
                 </div>
@@ -114,9 +114,35 @@ export default {
                 ico: "fa-school",
                 colorType: "1",
             },
-            ]
+            ],
+            fadeDownEl: [],
         }
-        
+    },
+    methods: {
+      isElemVisible(el) {
+        const rect = el.getBoundingClientRect()
+        const elemTop = rect.top + 200
+        const elemBottom = rect.bottom
+        console.log(elemTop, elemBottom)
+        return elemTop < window.innerHeight && elemBottom >= 0
+      },
+      handleScroll() {
+        for (let i = 0; i < this.fadeDownEl.length; i++) {
+          const elem = this.fadeDownEl[i];
+          if (this.isElemVisible(elem)) {
+            elem.style.opacity = '1'
+            elem.style.transform = 'scale(1)'
+            this.fadeDownEl.splice(i, 1) // Pour jouer l'animation seulement une fois
+          }
+        }
+      }
+    },
+    mounted() {
+      this.fadeDownEl = Array.from(document.getElementsByClassName('fade-down'))
+      document.addEventListener('scroll', this.handleScroll)
+    },
+    unmounted() {
+      document.removeEventListener('scroll', this.handleScroll)
     }
 }
 </script>
@@ -126,6 +152,7 @@ export default {
         position: relative;
         width: 100%;
         height: 100%;
+        margin-bottom: 100px;
     }
 
 
@@ -174,7 +201,7 @@ h2 {
 .timeline__event:nth-child(2n + 1) .timeline__event__icon:before {
   content: "";
   width: 2px;
-  height: 100%;
+  height: 0;
   background: var(--event1-second);
   position: absolute;
   top: 0%;
@@ -182,11 +209,11 @@ h2 {
   right: auto;
   z-index: 1;
   transform: translateX(-50%);
-  animation: fillTop 2s forwards ease-in-out;
+  animation: fillBottom 2s forwards 1s ease-in-out;
 }
 .timeline__event:nth-child(2n + 1) .timeline__event__icon:after {
   content: "";
-  width: 100%;
+  width: 0;
   height: 2px;
   background: var(--event1-second);
   position: absolute;
@@ -195,7 +222,7 @@ h2 {
   top: 50%;
   left: auto;
   transform: translateY(-50%);
-  animation: fillLeft 2s forwards ease-in-out;
+  animation: fillLeft 2s forwards 1s ease-in-out;
 }
 .timeline__event__title {
   font-size: 1.2rem;
@@ -249,18 +276,18 @@ h2 {
 .timeline__event__icon:before {
   content: "";
   width: 2px;
-  height: 100%;
+  height: 0;
   background: var(--event1-second);
   position: absolute;
   top: 0%;
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  animation: fillTop 2s forwards ease-in-out;
+  animation: fillBottom 2s forwards 1s ease-in-out;
 }
 .timeline__event__icon:after {
   content: "";
-  width: 100%;
+  width: 0;
   height: 2px;
   background: var(--event1-second);
   position: absolute;
@@ -268,7 +295,7 @@ h2 {
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
-  animation: fillLeftOdd 2s forwards ease-in-out;
+  animation: fillRight 2s forwards 1s ease-in-out;
 }
 .timeline__event__description {
   flex-basis: 60%;
@@ -370,6 +397,12 @@ h2 {
   content: none;
 }
 
+.fade-down {
+  opacity: 0;
+  transition: .4s all ease-out;
+  transform: scale(0.8);
+}
+
 
 @media (max-width: 786px) {
   .timeline__event {
@@ -409,17 +442,17 @@ h2 {
 
 @keyframes fillLeft {
   100% {
-    right: 100%;
+    width: 200%;
   }
 }
-@keyframes fillTop {
+@keyframes fillBottom {
   100% {
-    top: 100%;
+    height: 220%;
   }
 }
-@keyframes fillLeftOdd {
+@keyframes fillRight {
   100% {
-    left: 100%;
+    width: 200%;
   }
 }
 

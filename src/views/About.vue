@@ -17,8 +17,18 @@
             <div class="textZone d">Est plus à l'aise dans le développement Web mais est ouvert à tout autre domaine</div>
             <div class="textZone e">Motivé, rigoureux et sait s'intégrer à une équipe</div>
             <div class="textZone f">Possède un magnifique C.V. à retrouver en bas de cette page</div>
-        </div> 
+        </div>
+
         <Timeline />
+
+        <hr>
+
+        <div class="cvZone">
+            <img 
+            src="../assets/myCV.svg" 
+            alt="C.V. Nathan Schneider"
+            />
+        </div>
     </div>
 </template>
 
@@ -143,5 +153,15 @@ export default {
         100% {
             height: 400px;
         }
+    }
+
+
+    .cvZone {
+        margin-top: 100px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
