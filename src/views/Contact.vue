@@ -10,13 +10,13 @@ export default {
 <template>
     <div class="background">
         <div class="leftZone">
-            <p>Il est également possible de me contacter directement par mail via l'adresse suivante : nathan.schneider4505@gmail.com</p>
+            <p>Il est également possible de me contacter par mail via l'adresse suivante : <b>nathan.schneider4505@gmail.com</b></p>
         </div>
         <div class="frame">
             <LoginForm />
         </div>
         <div class="rightZone">
-            <p>...ou alors directement par téléphone via ce numéro : 07.82.45.39.21</p>
+            <p>...ou alors directement par téléphone via ce numéro : <b>07.82.45.39.21</b></p>
         </div>
     </div>
 </template>
@@ -87,12 +87,18 @@ export default {
         cursor: pointer;
         margin-top: 5%;
         padding: 5% 15%;
-        border: none;
         outline: none;
         border-radius: 100px;
         transition: filter .4s;
+
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .frame button:hover {
-        filter: brightness(90%);
+        filter: invert(100%);
     }
 </style>

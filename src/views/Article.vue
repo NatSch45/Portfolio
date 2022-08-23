@@ -88,8 +88,4 @@
     span {
         white-space: pre-line;
     }
-    
-    b {
-        font-weight: bold !important;
-    }
 </style>

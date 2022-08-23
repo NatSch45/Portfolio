@@ -12,7 +12,7 @@
             Message
             <textarea name="message" id="message" cols="50" rows="10"></textarea>
         </label>
-        <button>Envoyer</button>
+        <button>ENVOYER</button>
         <p class="subtext">Les champs spécifiés d'un "<span class="required">*</span>" doivent obligatoirement être complétés.</p>
     </form>
     
