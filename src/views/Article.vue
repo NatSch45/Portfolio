@@ -14,6 +14,8 @@
         name: 'Artcle',
         data() {
             return {
+                sondage1: "<img class=\"sondage1\" alt=\"Sondage frameworks web 'loved'\" />",
+                sondage2: "<img class=\"sondage2\" alt=\"Sondage frameworks web 'wanted'\" />",
                 articles: [
                     {
                         title: "Projet professionnel VS projet non professionnel",
@@ -26,9 +28,26 @@
                         text: "Lorsqu’on commence un projet ayant un minimum d’envergure, on se pose rapidement la question du choix de la BDD (Base De Données). Cette question n’est pas forcément simple à répondre car il existe pléthore de solutions qui se disent à chaque fois meilleure que l’autre dans un certain domaine. On va essayer de décortiquer tout ça dans cet article. <br>Pour commencer, il faut faire la distinction entre 2 types de BDD, les bases de données relationnelles et les bases de données non relationnelles qu’on peut respectivement associer au SQL et NoSQL. <br>Le SQL (Structured Query Data) est un langage de base de données structuré, fonctionnel selon un schéma de données qu’il est primordial de respecter afin de pouvoir correctement stocker des données. Cela passe par des tables, des colonnes, des relations, des clés étrangères, etc… C’est ce qui le différencie du NoSQL (Not only SQL), qui lui n’est pas contraint à respecter un certain schéma. Cet aspect le rend beaucoup plus souple, simple et rapide à utiliser. En contrepartie, il dénigre l’intégrité des données ainsi que la cohérence des relations et la sécurité qui y est associée. <br>Les bases SQL sont le type de BDD le plus répandu aujourd’hui, on peut notamment compter parmi ses rangs les langages suivants : MySQL, MariaDB, PostgreSQL, SQLite en gratuit et OpenSource ou encore Oracle, SQL Server en solutions payantes et propriétaires. <br>Les bases NoSQL les plus réputées sont les suivantes : MongoDB, CouchDB, Redis, Cassandra, ElasticSearch… <br>"
                     },
                     {
-                        title: "L'informatique dans le cinéma, les séries ou les jeux vidéo",
-                        subtitle: "Quels sont les impacts de l'informatique dans le monde du divertissement et quels sont les impacts du monde du divertissement dans l'informatique ?",
-                        text: "L’informatique est un sujet souvent évoqué dans le cinéma, principalement dans les films et séries traitant de science-fiction. En effet, les technologies futures ont toujours fait rêver les scénaristes, les metteurs en scène et les artistes d’effet spéciaux, ce qui nous a valu moultes technologies et interfaces futuristes.<br>"
+                        title: "Est-ce que Vue.js vaut le coup ?",
+                        subtitle: "Aujourd'hui, la concurrence des frameworks web est très rude alors il est légitime de se poser la question : Est-ce que Vue.js vaut le coup ?",
+                        text: `L’année dernière, Vue.js était présenté comme le troisième framework JS le plus utilisé par les développeurs front-end et le troisième le plus apprécié (85% d’appréciation) d’après les données du State Of JS 2020. Plus récemment lors de sondages effectués par le célèbre StackOverflow, il est présenté comme étant le 5ème framework web le plus apprécié et le 2ème pour qui les développeurs qui ne l’ont pas encore utilisé expriment le plus d’intérêt. Il est par ailleurs utilisé par de très grands noms comme Adobe, Alibaba ou encore GitLab.
+                        Ces données font de lui un langage que vous allez forcément rencontrer, si ce n’est pas déjà le cas. Alors nous allons voir ensemble dans cet article quelles sont les causes de cet engouement envers ce framework JS.<br>
+                        Reprenons depuis le début, Vue.js est un framework JavaScript open-source, apparu début 2014 grâce à son créateur Evan You, servant à développer des interfaces utilisateurs et des applications web monopages. L’une de ses fonctionnalités phares est l’utilisation de composants, qui sont des éléments HTML personnalisables, modelables et réutilisables. Ils permettent de compartiment l’architecture de notre projet en vues et composants afin de conserver une solution monopage très fonctionnelle.
+                        Ces composants comportent des états, qui permettent de contrôler par exemple leur apparition sur la page, la modification d’une variable ou encore leur disparition. Cette fonctionnalité est notamment très utile pour créer des transitions dynamiques aisément.
+                        Une vue ou un composant se constitue systématiquement des mêmes éléments principaux, à savoir :
+                        <ul><li>Une balise template --> correspondant au code HTML, c’est ici qu’on décide du contenu du composant</li> <li>Une balise script --> correspondant au JS/Vue.JS, c’est-à-dire de la gestion des variables, des méthodes, des états, du DOM, etc…</li> <li>Une balise style --> correspondant au CSS, comme vous l’aurez compris, c’est ici que nous allons noter les règles CSS pour la stylisation de notre contenu</li></ul>
+                        Nous allons maintenant examiner les <b>avantages</b> et les <b>inconvénients</b> qui constituent ce framework.
+                        Tout d’abord les avantages ; Vue.js jouit d’une <b>grande flexibilité</b>. En effet, son écriture est assez rapide dû au fait qu’il est directement interprété dans le navigateur. Cela simplifie alors les processus de test. Et surtout, les développeurs peuvent produire le même résultat à partir de codes différents, à l’instar de Vue Router (sans vouloir vous surprendre, le router de Vue.js) qui n’est pas nécessaire au développement d’une application.
+                        Ce framework étant basé sur JavaScript, il permet d’être <b>simplement intégré</b> à d’autres applications déjà existantes. C’est l’un des points qui expliquent sa grande popularité.
+                        Son architecture est dite <b>MVVM</b> (Model-View-View-Model), ce modèle accentue également la simplicité d’utilisation. Effectivement, cela facilite fortement la manipulation des blocs HTML et donc ici des composants Vue.
+                        L’aisance de compréhension de la <b>structure de ses fichiers</b> est selon moi un grand atout qui permet d’apprendre à utiliser les outils mis à notre disposition plus rapidement que sur un autre framework.
+                        Vue.js est marquée par sa <b>petite taille</b> et sa <b>rapidité d’exécution</b>. Malgré sa petite taille d’une vingtaine de kilooctets, sa vitesse reste inférieure à la plupart de ses rivaux.
+                        Un autre point fort de ce langage est sa <b>documentation détaillée</b>. En effet, elle est très riche et permet à n’importe quel développeur web, même débutant, de développer une application web digne de ce nom. De part sa popularité, la communauté est suffisante pour répondre à n’importe quelle question que vous pourriez vous poser à son sujet.<br>
+                        Nous avons pu voir que Vue.js comporte un bon nombre de qualités, cependant, il ne faut pas oublier de prendre en compte les inconvénients qui viennent avec.Vue.js reste un <b>langage limité</b> qui ne vous servira qu’à développer des applications web légères sans grandes complexités. Il manque donc ici d’évolutivité, sans doute dû au fait qu’il reste un projet indépendant qui n’est soutenu par aucun géant de la technologie.
+                        Il <b>manque</b> encore <b>de plugins</b>, notamment si on le compare à deux de ses rivaux, Angular et React. Il est donc possible de rencontrer des difficultés en voulant implémenter une certaine fonctionnalité.
+                        La <b>communauté</b> est très engagée mais reste <b>moins fournie</b> que ses concurrents. On espère qu’elle croîtra dans les années à venir.
+                        <br>
+                        Pour conclure, Vue.js est un très bon framework web JS, qui plus est populaire. Il est léger, rapide, simple de compréhension et possède une bonne documentation. En revanche, il resta recommandé pour les applications web légère sans trop grande envergure et complexité.`
                     },
                     {
                         title: "Voici comment faire pour être un meilleur développeur",
@@ -73,7 +92,7 @@
                     },
                 ]
             }
-        }
+        },
     }
 </script>
 

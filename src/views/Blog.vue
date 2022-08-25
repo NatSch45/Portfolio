@@ -29,9 +29,9 @@ export default {
                     presentImg: "bdd.png"
                 },
                 {
-                    title: "L'informatique dans le cinéma, les séries ou les jeux vidéo",
-                    subtitle: "Quels sont les impacts de l'informatique dans le monde du divertissement et quels sont les impacts du monde du divertissement dans l'informatique ?",
-                    presentImg: "imitation-game.png"
+                    title: "Est-ce que Vue.js vaut le coup ?",
+                    subtitle: "Aujourd'hui, la concurrence des frameworks web est très rude alors il est légitime de se poser la question : Est-ce que Vue.js vaut le coup ?",
+                    presentImg: "vuejs.jpg"
                 },
                 {
                     title: "Voici comment faire pour devenir un meilleur développeur",
