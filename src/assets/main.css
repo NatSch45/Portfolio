@@ -14,15 +14,17 @@
   align-items: center;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
+a.green {
+  color: hsla(160, 100%, 37%, 1);
+}
+
 
 a.router-link-active {
-  border-bottom: 2px solid #00BD7E;
+  color: #00BD7E !important;
 }
 
 .fade-enter-from,
@@ -36,14 +38,102 @@ a.router-link-active {
 }
 
 @media (hover: hover) {
-  a:hover {
+  .inPageLink:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
 
-@media (min-width: 1024px) {
-  /* body {
+@media (max-width: 870px) {
+  .navIcon span {
+    display: none;
+  }
+
+  .stroke-shadow {
+    font-size: 3.5vw !important;
+  }
+
+  .secondText {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .navList {
     display: flex;
-    place-items: center;
-  } */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    border-right: 2px solid #00BD7E;
+    z-index: 100;
+    background-color: #ffffff;
+    padding: 2% 9% 2% 4%;
+    transform: translate(-100%);
+    transition: transform .4s ease-out;
+    background-color: #E7F3F1;
+  }
+  .navList li {
+    margin-top: 12px;
+  }
+  .navList li a {
+    font-size: 17px;
+  }
+
+  .burger.open ~ .navList {
+    transform: translate(0%);
+  }
+
+  .burger {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: none;
+    background-color: #E7F3F1;
+    margin-left: 10px;
+    padding: 3%;
+  }
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity .3s .15s ease-out;
+  }
+  .burger span:nth-child(1),
+  .burger span:nth-child(3) {
+    transition: transform .3s ease-out;
+  }
+  .burger span:nth-child(1) {
+    transform: translateY(10px);
+  }
+  .burger span:nth-child(3) {
+    transform: translateY(-10px);
+  }
+  .burger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+  }
+  .burger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
+
+
+
+  .stroke-shadow {
+    font-size: calc(14px + 2vw) !important;
+  }
+
+  .secondText {
+    width: 90% !important;
+  }
 }

@@ -16,19 +16,19 @@
             <h2>Ce site comprend...</h2>
             <div class="presentItem">
                 <font-awesome-icon icon="fa-solid fa-code" />
-                <h3>Mon <span><a href="/projects">portfolio</a></span> avec tous les projets que j'ai mené ou ceux auxquels j'ai participé,</h3>
+                <h3>Mon <span><a href="/projects" class="inPageLink green">portfolio</a></span> avec tous les projets que j'ai mené ou ceux auxquels j'ai participé,</h3>
             </div>
             <div class="presentItem">
                 <font-awesome-icon icon="fa-solid fa-message" />
-                <h3>Un <span><a href="/blog">blog</a></span> dans lequel je répertorie mes articles qui traitent de sujets touchant de loin ou de près à l'informatique,</h3>
+                <h3>Un <span><a href="/blog" class="inPageLink green">blog</a></span> dans lequel je répertorie mes articles qui traitent de sujets touchant de loin ou de près à l'informatique,</h3>
             </div>
             <div class="presentItem">
                 <font-awesome-icon icon="fa-solid fa-user-tie" />
-                <h3>Une page "<span><a href="/about">À propos</a></span>" pour en savoir plus sur mon parcours, mes motivations et mes objectifs,</h3>
+                <h3>Une page "<span><a href="/about" class="inPageLink green">À propos</a></span>" pour en savoir plus sur mon parcours, mes motivations et mes objectifs,</h3>
             </div>
             <div class="presentItem">
                 <font-awesome-icon icon="fa-solid fa-envelope-open-text" />
-                <h3>Un formulaire de <span><a href="/contact">contact</a></span> si vous souhaitez en apprendre davantage, parler d'une éventuelle collaboration ou me faire parvenir une remarque.</h3>
+                <h3>Un formulaire de <span><a href="/contact" class="inPageLink green">contact</a></span> si vous souhaitez en apprendre davantage, parler d'une éventuelle collaboration ou me faire parvenir une remarque.</h3>
             </div>
         </div>
 
