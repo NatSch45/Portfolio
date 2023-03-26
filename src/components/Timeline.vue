@@ -123,7 +123,6 @@ export default {
         const rect = el.getBoundingClientRect()
         const elemTop = rect.top + 200
         const elemBottom = rect.bottom
-        console.log(elemTop, elemBottom)
         return elemTop < window.innerHeight && elemBottom >= 0
       },
       handleScroll() {

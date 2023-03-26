@@ -45,6 +45,10 @@ export default {
 </template>
 
 <style>
+    h1, h2, span, p, .textZone {
+        color: black;
+    }
+
     .logo {
         width: 35px;
         height: 35px;

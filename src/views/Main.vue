@@ -8,7 +8,7 @@
                 <h1 class="stroke-shadow">Bienvenue sur mon site personnel,</h1>
             </div>
             <div class="secondText">
-                <h2 class="stroke-shadow">Je m'appelle Nathan Schneider, j'ai 20 ans et je suis actuellement étudiant en informatique</h2>
+                <h2 class="stroke-shadow">Je m'appelle Nathan Schneider, j'ai 21 ans et je suis actuellement alternant en informatique</h2>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
         </div>
 
         <footer>
-            <p>Développé en <span>VueJS</span> avec l'aide de <span>FontAwesome</span>.</p>
+            <p>Développé en <span>VueJS</span> avec l'aide de <span>FontAwesome</span> et déployé via <span>Vercel</span>.</p>
         </footer>
     </div>
 </template>
